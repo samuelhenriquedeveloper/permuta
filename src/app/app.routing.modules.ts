@@ -8,9 +8,11 @@ import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao
 
 const appRoutes: Routes = [
     { path: 'cadastro', 
-        loadChildren: 'app/cadastro/cadastro.module#CursosModule',
-
+        loadChildren: 'app/cadastro/cadastro.module#CadastroModule',
     },
+    { path: 'pesquisa', 
+    loadChildren: 'app/pesquisa/pesquisa.module#PesquisaModule',
+    },    
     { path: 'login', component: LoginComponent },
     { path: 'home', component: HomeComponent  },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -18,7 +20,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(appRoutes, {useHash: true})],
+    imports: [RouterModule.forRoot(appRoutes, {useHash: false})],
     exports: [RouterModule]
 })
 export class AppRoutingModule {}

@@ -18,4 +18,4 @@ import { CadastroComponent } from './cadastro.component';
     ],
     providers: [CadastroService],
 })
-export class CursosModule { }
+export class CadastroModule { }
